@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Cart</title>
+</head>
+<body>
+       
+    <div class="container-fluid">
+        <div class="row item-row">
+            <!--Products are showing here from app.js  -->
+        </div>
+
+        <div class="cart-itms shadow-lg" onclick="cartDetails('cartShow')">
+            <h6 id="count" class="m-0"> cart 0 </h6>   
+        </div>
+        <div class="tal-cart-content table-responsive shadow-lg">
+            <div class="d-flex justify-content-between align-items-center sticky-top my-1 custom-bg1 h4 border-bottom border-info"><span>Cart Details</span> <button onclick="cartDetails('cartHide')">&times;</button></div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Product Name</th>
+                        <th>Unit price</th>
+                        <th>Quantity</th>
+                        <th></th>
+                    </tr>
+                </thead>                
+                <tbody class="cart-itm">
+                    <!-- Here is rendering cart items -->
+                </tbody>
+            </table>
+            <div class="total h6 sticky-bottom custom-bg1 p-2">Total : 0.00 </div>
+            <div class="proceed custom-bg1 p-2 h6 text-center">
+                <a href="#">Proceed to checkout</a>
+            </div>
+        </div>  
+    </div>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="function.js"></script> -->
+    <script src="app.js"></script>
+</body>
+</html>
